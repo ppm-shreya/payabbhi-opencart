@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'/../../../../system/library/payabbhi-php/init.php';
+require_once __DIR__.'/../../../../system/library/vendor/autoload.php';
 
 class ControllerExtensionPaymentPayabbhi extends Controller
 {
