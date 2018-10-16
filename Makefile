@@ -11,9 +11,11 @@ init:
 
 prepare:
 	mkdir payabbhi
+	mkdir -p system/library
+	mv vendor   system/library
 	cp -R admin payabbhi/
 	cp -R catalog payabbhi/
-	mv vendor payabbhi/
+	cp -R system payabbhi/
 	cp README.md payabbhi/
 	cp VERSION  payabbhi/
 
@@ -26,6 +28,7 @@ cleanup:
 	mv payabbhi-opencart-$(VER).tar.gz dist
 	rm composer.*
 	rm -rf payabbhi
+	rm -rf system
 
 clean:
 	rm -rf dist
